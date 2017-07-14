@@ -1,0 +1,30 @@
+The project is a demo project for control the hcu's lock
+parameters:
+userid: hard-code or get from wechart parameter. now hardcode value is 12345
+statecode: hard-code.now hardcode value is 12345
+
+Message:
+    "HCU_Lock_Status": //Query A Lock status by statCode.
+    "HCU_Lock_open": //Open a lock
+
+Not implement message:
+    "HCU_Lock_close": //Close a lock
+    "HCU_Wechat_Login": //Use Wechat to login the Server, response is the userID in system.
+    "HCU_Lock_Query": //Query How many lock is autherized to user,response is a list of StatCode and Name and Location and so on
+
+
+resource:
+            fontawesome
+
+Layout:
+    only design for mobile device=> phone or pad:
+    Head: height will be 1/10 of length of window (no matter device is horizontal or vertical), wide will be 100%
+    Foot: Just like head
+    middleview:
+        Map view:   choice the device by map (not implement)
+        list view:  choice the device by list (not implement)
+        lockview:  use lock picture and unlock picture
+Color:
+    gray & wechat green
+
+

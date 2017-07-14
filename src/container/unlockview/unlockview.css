@@ -1,0 +1,29 @@
+.unlocklabel{
+    color: #eeeeee;
+    font-family: "Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.471;
+}
+.lockbutton{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-weight: 400;
+    font-size: 22px;
+    width: 100%;
+    color: #ECF0F1 !important;
+    margin-left: 0 !important;
+    line-height: 59px;
+    display: block;
+    height: 55px;
+    margin: 0;
+}
+.lockbutton i{
+    color: #eeeeee;
+    border: 10px solid #eeeeee;
+    /*padding: 6px 58px;*/
+    border-radius: 30%;
+}
+.lockbutton:hover, .lockbutton:focus {
+    text-decoration: none
+}
