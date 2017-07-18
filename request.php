@@ -124,7 +124,7 @@ switch ($key){
             $jsonencode = _encode($retval);
             echo $jsonencode; break;
     case "HCU_Lock_close": //Close a lock
-    case "HCU_Lock_Activate": //Open a lock
+    case "HCU_AQYC_Activate": //Open a lock
             $body=$payload["body"];
             $code=$body["code"];
             $ret_stat = "false";

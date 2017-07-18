@@ -61,8 +61,8 @@ class App extends Component{
     updateactivecode(code){
         this.refs.Activateview.update_code(code);
     }
-    updateactivenotes(notes){
-        this.refs.Activateview.update_notes(notes);
+    updateactivenotes(notes,LA,LO){
+        this.refs.Activateview.update_notes(notes,LA,LO);
     }
     showactiveview(){
         this.refs.Uploadview.hide();
@@ -165,7 +165,7 @@ function getRelativeURL(){
 function getLocation()
 {
     //alert("正在获取位置！");
-    app_handle.updateactivenotes("正在获取位置！");
+    app_handle.updateactivenotes("正在获取位置！","","");
     /*
     if (navigator.geolocation)
     {
@@ -235,13 +235,13 @@ function query_callback(res){
     }
     if(res.jsonResult.auth == "false"){
         app_handle.updateactivestatus(false);
-        app_handle.updateactivenotes("激活失败:"+res.jsonResult.msg);
+        app_handle.updateactivenotes("激活失败:"+res.jsonResult.msg,"","");
         cycle_number = 101;
         return;
     }
     app_handle.showactiveview();
     app_handle.updateactivestatus(true);
-    app_handle.updateactivenotes("设备已激活！");
+    app_handle.updateactivenotes("设备已激活!","LA:"+Latitude,"LO:"+Longitude);
     //alert("设备已激活！");
     cycle_number = 101;
     return;
@@ -257,7 +257,7 @@ function fetchactivate(){
         longitude:""+Longitude
     };
     let listreq = {
-        action:"HCU_Lock_Activate",
+        action:"HCU_AQYC_Activate",
         body:body,
         type:"query",
         user:"activeuser"

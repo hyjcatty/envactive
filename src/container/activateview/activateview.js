@@ -25,6 +25,8 @@ export default class activateview extends Component {
             note_height:140,
             activated:false,
             notes:"Not Activate",
+            LA:"",
+            LO:"",
             cycle:30,
             interval:0,
             hide:"block",
@@ -37,8 +39,9 @@ export default class activateview extends Component {
     update_code(statcode){
         this.setState({code:"Code:"+statcode});
     }
-    update_notes(notes){
-        this.setState({notes:notes});
+    update_notes(notes,LA,LO){
+        //console.log("test£º"+LA+"    "+LO);
+        this.setState({notes:notes,LA:LA,LO:LO});
     }
     update_status(status){
         this.setState({activated:status});
@@ -67,7 +70,11 @@ export default class activateview extends Component {
                     <div style={{clear:"both"}}></div>
                 </div>
                 <div style={{position:"relative",width:'100%',height:this.state.note_height,textAlign : 'center',display:"table"}}>
-                    <div className="unlocklabel" style={{position:"relative",width:"100%",height:this.state.title_height,float:"left",fontSize:this.state.height/24,display:"table-cell",verticalAlign:"middle",margin:"auto"}} >{this.state.notes}
+                    <div className="unlocklabel" style={{position:"relative",width:"100%",height:this.state.note_height*0.3,float:"left",fontSize:this.state.height/24,display:"table-cell",verticalAlign:"middle",margin:"auto"}} >{this.state.notes}
+                    </div>
+                    <div className="unlocklabel" style={{position:"relative",width:"100%",height:this.state.note_height*0.3,float:"left",fontSize:this.state.height/36,display:"table-cell",verticalAlign:"middle",margin:"auto"}} >{this.state.LA}
+                    </div>
+                    <div className="unlocklabel" style={{position:"relative",width:"100%",height:this.state.note_height*0.3,float:"left",fontSize:this.state.height/36,display:"table-cell",verticalAlign:"middle",margin:"auto"}} >{this.state.LO}
                     </div>
                     <div style={{clear:"both"}}></div>
                 </div>

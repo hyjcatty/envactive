@@ -22,7 +22,7 @@ export default class foot extends Component {
         super(props);
         this.state={
             height:50,
-            content:"©上海爱启",
+            content:"站点激活平台",
             hide:"none",
             callback:null,
             disabled:""

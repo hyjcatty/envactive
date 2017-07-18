@@ -32,11 +32,12 @@ export default class head extends Component {
         this.setState({username:username})
     }
     render() {
-        let temp = "站点:"+this.state.username;
+        //let temp = "站点:"+this.state.username;
+        let temp = "用户您好！";
         return (
             <div style={{position:"relative",background:"#eeeeee",height:this.state.height,width:'100%',display:'table'}}>
                 <a style={{position:"relative",height:this.state.height,display:'table-cell',verticalAlign:'middle'}}><i style={{marginLeft:this.state.height*0.3,fontSize:this.state.height*0.5,color:"#62b900"}}><img src="./resource/image/fuhua.png"  style={{height:this.state.height*0.8,width:this.state.height*0.8,zIndex: -1}}></img></i> </a>
-                <a style={{position:"relative",height:this.state.height,display:'table-cell',verticalAlign:'middle'}}><span className="headlabel" style={{fontSize:this.state.height*0.3,marginLeft:"0px"}}>扬尘监控系统</span></a>
+                <a style={{position:"relative",height:this.state.height,display:'table-cell',verticalAlign:'middle',textAlign:'center'}}><span className="headlabel" style={{fontSize:this.state.height*0.3,marginLeft:"0px"}}>扬尘监控系统</span></a>
                 <a style={{position:"relative",height:this.state.height,display:'table-cell',verticalAlign:'middle'}}>< span className="headlabel pull-right" style={{fontSize:this.state.height*0.2,marginRight:this.state.height*0.3}}>{temp}</span></a>
             </div>
         );
